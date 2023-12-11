@@ -2,9 +2,13 @@ import { Controller } from "@hotwired/stimulus";
 import { enter, leave, toggle } from 'el-transition';
 
 export default class extends Controller {
+
+  static targets = ["openUserMenu"];
   connect() {
-    console.log('enter');
-    console.log('leave');
-    console.log('toggle');
+    this.openUserMenuTarget.addEventListener("click", this.toggleDropdownMenu);
+  }
+
+  toggleDropdownMenu() {
+    toggle(document.getElementById("user-menu"));
   }
 }
