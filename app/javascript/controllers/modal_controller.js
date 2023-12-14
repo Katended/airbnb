@@ -4,15 +4,10 @@ import { enter, leave, toggle } from 'el-transition';
 export default class extends Controller {
 
   connect() {
-    // enter(document.getElementById('modal-wrapper'));
-    // enter(document.getElementById('modal-backdrop'));
-    // enter(document.getElementById('modal-panel'));
-
     document.getElementById('modal-wrapper').addEventListener("click", this.closeModal);
-
   }
 
-  closeModal() {
+  closeModal(event) {
     const modalClicked = document.getElementById('modal-panel').contains(event.target);
 
     if (!modalClicked) {
@@ -23,7 +18,9 @@ export default class extends Controller {
   }
 
   showModal() {
-
+    enter(document.getElementById('modal-wrapper'));
+    enter(document.getElementById('modal-backdrop'));
+    enter(document.getElementById('modal-panel'));
   }
 
 }

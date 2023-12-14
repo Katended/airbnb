@@ -10,8 +10,12 @@ export default class extends Controller {
     // this.loginLink.addEventListener("click", this.toggleDropdownMenu);
 
     this.userAuthLinkTargets.forEach((link) => {
-      link.addEventListener("click", () => {
-        console.log("clicked");
+
+      link.addEventListener("click", (e) => {
+        e.preventDefault();
+
+        console.log('link is clicked');
+        document.getElementById('modal-wrapper').click();
       });
     });
   }
