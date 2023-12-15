@@ -1,12 +1,13 @@
 <div 
-data-controller="model" 
+data-controller="modal" 
 class=" hidden relative z-10" 
 aria-labelledby="modal-title" 
 role="dialog" 
 aria-modal="true"
 id="modal-wrapper"
-data-action="click->modal#showModal()"
+
 >
+<div class="hidden" id="modal-trigger" data-action="click->modal#showModal"></div>
   <!--
     Background backdrop, show/hide based on modal state.
 
