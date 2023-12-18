@@ -1,2 +1,6 @@
 $airbnb-logo:#ff385c;
-   
+
+.airbnb-pink-gradient {
+  background: linear-gradient(to right,rbg(230,30,77) 0%, rbg(277,28,95) 50%, rbg(215,4,102) 100%);
+  background-image: linear-gradient(to right, rbg(230, 30, 77) 0%, rbg(277, 28, 95) 50%, rbg(215, 4, 102) 100%);
+}
