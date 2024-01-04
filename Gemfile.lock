@@ -269,7 +269,6 @@ DEPENDENCIES
   capybara
   debug
   devise
-  factory_bot
   factory_bot_rails
   importmap-rails
   jbuilder
