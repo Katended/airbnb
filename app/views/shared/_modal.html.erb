@@ -51,12 +51,16 @@ data-transition-leave-end="opacity-0"
         <div class="bg-white px-4 pb-4 pt-5 sm:p-6 sm:pb-4">
           <div>
             <div class="sm:ml-4 sm:mt-0 sm:text-left">
-              <div class="flex  ">
+              <div class="flex">
+              <div class="flex-none cursor-pointer hover:text-bold" data-modal-target="closeButton">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" data-slot="icon" class="w-6 h-6">
                   <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
                 </svg>
-                <h3 class="text-sm  text-center font-semibold leading-6 text-gray-900 mb-4" id="modal-title">Login or Sign up</h3>
               </div>
+              <div class="grow">
+                <h3 class="text-sm pr-7 text-center font-semibold leading-6 text-gray-900 mb-4" id="modal-title">Login or Sign up</h3>
+              </div>
+            </div>  
               <div class="relative">
                 <div class="absolute inset-0 flex items-center" aria-hidden="true">
                   <div class="w-full border-t border-gray-300"></div>
