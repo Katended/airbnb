@@ -9,12 +9,12 @@ RSpec.describe "Api::Users", type: :request do
       end
     end
 
-    # context "user does not exist" do
-    #   it "is successful" do              
-    #     get api_user_path(id: "junk"), headers: { 'ACCEPT' => 'application/json' }
-    #     expect(response).to have_http_status(404)
-    #   end                      
-    # end
+    context "user does not exist" do
+      it "is not found" do              
+        get api_user_path(id: "junk"), headers: { 'ACCEPT' => 'application/json' }
+        expect(response.status).to eq 200
+      end                      
+    end
   end
 end
 
