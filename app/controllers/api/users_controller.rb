@@ -2,10 +2,10 @@ module Api
 
     require 'pry'
     class UsersController < ApplicationController
+
         def show
             user = User.find_by(id: params[:id])
-            respond_to do |format|
-                binding.pry
+            respond_to do |format|       
                format.json do
                     render json: user.to_json, status: :ok
                end               
