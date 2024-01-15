@@ -1,25 +1,4 @@
- <div class="fixed inset-0 z-10 w-screen overflow-y-auto">
-    <div class="flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0">
-      <!--
-        Modal panel, show/hide based on modal state.
-
-        Entering: "ease-out duration-300"
-          From: "opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
-          To: "opacity-100 translate-y-0 sm:scale-100"
-        Leaving: "ease-in duration-200"
-          From: "opacity-100 translate-y-0 sm:scale-100"
-          To: "opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
-      -->
-      <div 
-      id="modal-panel"
-      data-transition-enter="ease-out duration-300"
-      data-transition-enter-start="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
-      data-transition-enter-end="opacity-100 translate-y-0 sm:scale-100"
-      data-transition-leave="ease-in duration-200"
-      data-transition-leave-start="opacity-100 translate-y-0 sm:scale-100"
-      data-transition-leave-end="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
-      class="hidden relative transform overflow-hidden rounded-lg bg-white text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-lg">
-        <div class="bg-white px-4 pb-4 pt-5 sm:p-6 sm:pb-4">
+ <div data-controller="users-by-email-auth" class="bg-white px-4 pb-4 pt-5 sm:p-6 sm:pb-4">
           <div>
             <div class="sm:ml-4 sm:mt-0 sm:text-left">
               <div class="flex">
@@ -43,29 +22,13 @@
               <div class="mt-4">
                 <h3 class="text-1xl leading-6 text-gray-900  " id="modal-title">Welcome to Airbnb</h3>
               </div>
-              <div class="relative mt-4 rounded-md shadow-sm">   
-                <input type="text" name="Email" id="Email" class="w-full block rounded-md border-0 py-1.5 pl-7 pr-20 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" placeholder="Email">   
-              </div>           
+              <div class="relative mt-4 rounded-md shadow-sm">
+                <label for="email" class="block text=xs font-medium text-gray-900">Email</label>
+                <input data-users-by-email-auth-target="email"  type="text" name="Email" id="email" class="w-full block rounded-md border-0 py-1.5 pl-7 pr-20 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" placeholder="Email">   
+              </div> 
+               <div class="px-4 py-3 sm:px-6 w-full">
+                <button data-users-by-email-auth-target="submit"   class="w-full mt-3 inline-flex justify-center rounded-md bg-indigo-700 px-3 py-2 text-sm font-semibold text-white shadow-sm airbnb-pink-gradient">Submit</button>                   
+              </div>          
             </div>
           </div>
-        </div>
-        <div class="px-4 py-3 sm:px-6 w-full">
-          <button class="w-full mt-3 inline-flex justify-center rounded-md bg-indigo-700 px-3 py-2 text-sm font-semibold text-white shadow-sm airbnb-pink-gradient">Cancel</button>                   
-        </div>
-       <div class="relative mr-6 w-full flex justify-center">
-          <div class="absolute inset-0 flex items-center sm:ml-6 sm:mr-4" aria-hidden="true">
-            <div class="w-full border-t border-gray-300"></div>
-          </div>
-          <div class="relative flex justify-center">
-            <span class="px-2 bg-white text-sm text-gray-500">Or</span>
-          </div>
-      </div>       
-       <div class="px-4 py-3  sm:px-6 w-full">
-          <button class="w-full mt-3 inline-flex justify-center rounded-md text-gray-900 ring-1 ring-inset ring-gray-300 bg-white px-3 py-2 text-sm font-semibold text-gray shadow-sm hover:bg-gray-600 focus:ring-gray-500 active:bg-gray-700">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-hidden="true" role="presentation" focusable="false" style="display: block; height: 20px; width: 20px;"><path fill="#1877F2" d="M32 0v32H0V0z"></path><path fill="#FFF" d="M22.94 16H18.5v-3c0-1.27.62-2.5 2.6-2.5h2.02V6.56s-1.83-.31-3.58-.31c-3.65 0-6.04 2.21-6.04 6.22V16H9.44v4.63h4.06V32h5V20.62h3.73l.7-4.62z"></path></svg>
-            <div class="w-full">Continue with Facebook</div>
-          </button>                   
-        </div>
-      </div>
-    </div>
-  </div>
+</div>
