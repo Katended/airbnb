@@ -25,6 +25,7 @@ export default class extends Controller {
   }
 
   showModal() {
+    console.log("showing modal");
     enter(document.getElementById('modal-wrapper'));
     enter(document.getElementById('modal-backdrop'));
     enter(document.getElementById('modal-panel'));
