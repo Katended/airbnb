@@ -95,14 +95,13 @@ autoprefixer@^10.4.16:
     picocolors "^1.0.0"
     postcss-value-parser "^4.2.0"
 
-axios@^1.6.5:
-  version "1.6.5"
-  resolved "https://registry.npmjs.org/axios/-/axios-1.6.5.tgz"
-  integrity sha512-Ii012v05KEVuUoFWmMW/UQv9aRIc3ZwkWDcM+h5Il8izZCtRVpDUfwpoFf7eOtajT3QiGR4yDUx7lPqHJULgbg==
+axios@^0.27.2:
+  version "0.27.2"
+  resolved "https://registry.npmjs.org/axios/-/axios-0.27.2.tgz"
+  integrity sha512-t+yRIyySRTp/wua5xEr+z1q60QmLq8ABsS5O9Me1AsE5dfKqgnCFzwiCZZ/cGNd1lq4/7akDWMxdhVlucjmnOQ==
   dependencies:
-    follow-redirects "^1.15.4"
+    follow-redirects "^1.14.9"
     form-data "^4.0.0"
-    proxy-from-env "^1.1.0"
 
 balanced-match@^1.0.0:
   version "1.0.2"
@@ -138,6 +137,11 @@ browserslist@^4.21.10, "browserslist@>= 4.21.0":
     electron-to-chromium "^1.4.535"
     node-releases "^2.0.13"
     update-browserslist-db "^1.0.13"
+
+"bufferjs@>= 0.0.0":
+  version "3.0.1"
+  resolved "https://registry.npmjs.org/bufferjs/-/bufferjs-3.0.1.tgz"
+  integrity sha512-qrCIGPcd9ODawCNyqR2o55zgaC/r7XHZ7oUh2s99uk+NVBS3SjIHigxS1S2KXpt8wsoQxAN55iPi8GIH8TGMRg==
 
 camelcase-css@^2.0.1:
   version "2.0.1"
@@ -234,6 +238,18 @@ fastq@^1.6.0:
   dependencies:
     reusify "^1.0.4"
 
+"File@>= 0.0.0":
+  version "0.10.2"
+  resolved "https://registry.npmjs.org/File/-/File-0.10.2.tgz"
+  integrity sha512-gomQVTq/10wIR399uhGTWtYcYneTXbfe3p2RO/NR0MPrLkIyOaE9DCEPXihAm+72epLtXaplitwfJ/wkmj88dg==
+  dependencies:
+    mime ">= 0.0.0"
+
+"FileReader@>= 0.0.0":
+  version "0.10.2"
+  resolved "https://registry.npmjs.org/FileReader/-/FileReader-0.10.2.tgz"
+  integrity sha512-O0K+5KRnDBFNogBPtV5hWjyJSQOoB2j3ZLbre1pBjCdE9CNpeIUPI8IX3G7eafIZ/HsllbGaIucEbt2qL+EX0g==
+
 fill-range@^7.0.1:
   version "7.0.1"
   resolved "https://registry.npmjs.org/fill-range/-/fill-range-7.0.1.tgz"
@@ -241,10 +257,15 @@ fill-range@^7.0.1:
   dependencies:
     to-regex-range "^5.0.1"
 
-follow-redirects@^1.15.4:
+follow-redirects@^1.14.9:
   version "1.15.5"
   resolved "https://registry.npmjs.org/follow-redirects/-/follow-redirects-1.15.5.tgz"
   integrity sha512-vSFWUON1B+yAw1VN4xMfxgn5fTUiaOzAJCKBwIIgT/+7CuGy9+r+5gITvP62j3RmaD5Ph65UaERdOSRGUzZtgw==
+
+"forEachAsync@>= 2.0.0":
+  version "3.0.0"
+  resolved "https://registry.npmjs.org/forEachAsync/-/forEachAsync-3.0.0.tgz"
+  integrity sha512-a6qFIJll2VuqpWNRvJfgT7pGgobR89qnARafcCkGg6q1BCWrowc3WvRoYidxtFWRwaeUpk+5kiKZtdlRLwSufQ==
 
 form-data@^4.0.0:
   version "4.0.0"
@@ -254,6 +275,17 @@ form-data@^4.0.0:
     asynckit "^0.4.0"
     combined-stream "^1.0.8"
     mime-types "^2.1.12"
+
+FormData@^0.10.1:
+  version "0.10.1"
+  resolved "https://registry.npmjs.org/FormData/-/FormData-0.10.1.tgz"
+  integrity sha512-Win+aXiahTJE/uwQWcq7BaLRdqOjNlDiWq2RkGvywkUluz8uejQrUPfmuXJJ6+4kaoH0r4S7Y+J6R/PGcNyp5w==
+  dependencies:
+    bufferjs ">= 0.0.0"
+    File ">= 0.0.0"
+    FileReader ">= 0.0.0"
+    forEachAsync ">= 2.0.0"
+    remedial ">= 0.0.0"
 
 fraction.js@^4.3.6:
   version "4.3.7"
@@ -392,6 +424,11 @@ mime-types@^2.1.12:
   dependencies:
     mime-db "1.52.0"
 
+"mime@>= 0.0.0":
+  version "4.0.1"
+  resolved "https://registry.npmjs.org/mime/-/mime-4.0.1.tgz"
+  integrity sha512-5lZ5tyrIfliMXzFtkYyekWbtRXObT9OWa8IwQ5uxTBDHucNNwniRqo0yInflj+iYi5CBa6qxadGzGarDfuEOxA==
+
 minimatch@^3.0.4:
   version "3.1.2"
   resolved "https://registry.npmjs.org/minimatch/-/minimatch-3.1.2.tgz"
@@ -528,11 +565,6 @@ postcss@^8.0.0, postcss@^8.1.0, postcss@^8.2.14, postcss@^8.4.21, postcss@^8.4.2
     picocolors "^1.0.0"
     source-map-js "^1.0.2"
 
-proxy-from-env@^1.1.0:
-  version "1.1.0"
-  resolved "https://registry.npmjs.org/proxy-from-env/-/proxy-from-env-1.1.0.tgz"
-  integrity sha512-D+zkORCbA9f1tdWRK0RaCR3GPv50cMxcrz4X8k5LTSUD1Dkw47mKJEZQNunItRTkWwgtaUSo1RVFRIG9ZXiFYg==
-
 queue-microtask@^1.2.2:
   version "1.2.3"
   resolved "https://registry.npmjs.org/queue-microtask/-/queue-microtask-1.2.3.tgz"
@@ -551,6 +583,11 @@ readdirp@~3.6.0:
   integrity sha512-hOS089on8RduqdbhvQ5Z37A0ESjsqz6qnRcffsMU3495FuTdqSm+7bhJ29JvIOsBDEEnan5DPu9t3To9VRlMzA==
   dependencies:
     picomatch "^2.2.1"
+
+"remedial@>= 0.0.0":
+  version "1.0.8"
+  resolved "https://registry.npmjs.org/remedial/-/remedial-1.0.8.tgz"
+  integrity sha512-/62tYiOe6DzS5BqVsNpH/nkGlX45C/Sp6V+NtiN6JQNS1Viay7cWkazmRkrQrdFj2eshDe96SIQNIoMxqhzBOg==
 
 resolve@^1.1.7, resolve@^1.22.2:
   version "1.22.8"
