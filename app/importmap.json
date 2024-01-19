@@ -1,0 +1,5 @@
+{
+  "imports": {
+    "axios": "node:axios/dist/axios.min.js"
+  }
+}
