@@ -1,4 +1,5 @@
 {
+  "type": "module",
   "dependencies": {
     "autoprefixer": "^10.4.16",
     "axios": "^1.6.5",

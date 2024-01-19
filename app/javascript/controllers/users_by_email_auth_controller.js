@@ -1,5 +1,6 @@
-import { Controller } from "@hotwired/stimulus";
-import axios from "axios";
+import { Controller } from "@hotwired/stimulus"
+const axios = require('axios');
+
 
 export default class extends Controller {
 
@@ -11,7 +12,7 @@ export default class extends Controller {
             e.preventDefault();
 
             if (this.emailTarget.value.length > 0) {
-                console.log('axios: ', axios);
+                console.log('axios: ');
             } else {
                 //  this.submitTarget.disabled = true;
             }
