@@ -5,7 +5,6 @@ Rails.application.routes.draw do
    root :to => 'home#index'
   
   namespace :api do
-    resources :users, only: [:show]
     get "/users_by_email/", to: "users_by_email#show", as: :users_by_email
   end
 end
