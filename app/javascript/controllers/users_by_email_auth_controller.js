@@ -1,7 +1,7 @@
 import { Controller } from "@hotwired/stimulus"
 import axios from "axios"
 export default class extends Controller {
-    static targets = ["email", "submit"];
+    static targets = ["email", "submit", "emailWrapper"];
 
     connect() {
         this.submitTarget.addEventListener('click', (e) => {
@@ -13,7 +13,8 @@ export default class extends Controller {
                     headers: { "accept": "application/json" }
                 }).then(() => { Turbo.visit('/users/sign_in') }).catch((resposne) => { Turbo.visit('/users/sign_up') });
             } else {
-                //  this.submitTarget.disabled = true;
+                this.emailWrapper.classList.add('invalid-inset-input-text-field');
+                this.emailWrapper.classList.remove('focus-within:ring-1');
             }
         });
     }
