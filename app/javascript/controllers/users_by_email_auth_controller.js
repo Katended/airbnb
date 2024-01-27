@@ -1,7 +1,7 @@
 import { Controller } from "@hotwired/stimulus"
 import axios from "axios"
 export default class extends Controller {
-    static targets = ["email", "submit", "emailWrapper"];
+    static targets = ["email", "submit", "errorMessage", "emailWrapper", "invalidSvg"];
 
     connect() {
         this.submitTarget.addEventListener('click', (e) => {
@@ -15,6 +15,11 @@ export default class extends Controller {
             } else {
                 this.emailWrapper.classList.add('invalid-inset-input-text-field');
                 this.emailWrapper.classList.remove('focus-within:ring-1');
+                this.emailWrapper.classList.remove('focus-within:ring-black');
+                this.emailWrapper.classList.remove('focus-within:border-black');
+                this.invalidSvg.classList.remove('hidden');
+                this.errorMessage.classList.remove('hidden');
+
             }
         });
     }
