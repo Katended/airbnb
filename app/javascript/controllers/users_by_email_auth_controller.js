@@ -13,12 +13,12 @@ export default class extends Controller {
                     headers: { "accept": "application/json" }
                 }).then(() => { Turbo.visit('/users/sign_in') }).catch((resposne) => { Turbo.visit('/users/sign_up') });
             } else {
-                this.emailWrapper.classList.add('invalid-inset-input-text-field');
-                this.emailWrapper.classList.remove('focus-within:ring-1');
-                this.emailWrapper.classList.remove('focus-within:ring-black');
-                this.emailWrapper.classList.remove('focus-within:border-black');
-                this.invalidSvg.classList.remove('hidden');
-                this.errorMessage.classList.remove('hidden');
+                this.emailWrapperTarget.classList.add('invalid-inset-input-text-field');
+                this.emailWrapperTarget.classList.remove('focus-within:ring-1');
+                this.emailWrapperTarget.classList.remove('focus-within:ring-black');
+                this.emailWrapperTarget.classList.remove('focus-within:border-black');
+                this.invalidSvgTarget.classList.remove('hidden');
+                this.errorMessageTarget.classList.remove('hidden');
 
             }
         });
