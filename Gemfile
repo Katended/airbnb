@@ -52,10 +52,14 @@ gem "sassc-rails"
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"
 
+gem 'axios_rails', '~> 0.7.0'
+
 group :development, :test do
+ gem "factory_bot_rails"
+ gem "pry-rails"
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem "debug", platforms: %i[ mri mingw x64_mingw ]
-   gem "factory_bot_rails"
+  
 end
 
 group :development do
@@ -77,4 +81,4 @@ group :test do
   gem "selenium-webdriver"
 end
 
-gem "tailwindcss-rails", "~> 2.0"
+gem "tailwindcss-rails"
