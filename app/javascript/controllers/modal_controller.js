@@ -23,7 +23,6 @@ export default class extends Controller {
       leave(document.getElementById('modal-panel'));
     }
   }
-
   showModal() {
     enter(document.getElementById('modal-wrapper'));
     enter(document.getElementById('modal-backdrop'));
