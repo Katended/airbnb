@@ -15,27 +15,23 @@
     
       <input type="hidden" name="remember" value="true">
       <div class="rounded-md shadow-sm -space-y-px">
-        <div>
-          <%= f.label :email %>
+        <div>          
           <%= f.email_field :email, autofocus: true, autocomplete: "email", class:"appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm" %>           
         </div>
-        <div>
-           <%= f.label :password %>
-            <% if @minimum_password_length %>
-            <em>(<%= @minimum_password_length %> characters minimum)</em>
-            <% end %><br />
+        <div>         
+           
             <%= f.password_field :password, placeholder:"password", autocomplete: "new-password", class:"appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-b-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm" %>        
         </div>
       </div>
       <div class="flex items-center justify-between">       
         <% if devise_mapping.rememberable?%>
           <div class="flex items-center">
-            <%= f.check_box :remember_me ,class:"h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-red-500"%>
-            <%= f.label :remember_me ,class:"ml-2 block text-sm text-gray-900"%>
+            <%= f.check_box :remember_me ,class:"h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-red-500" %>
+            <%= f.label :remember_me,class:"ml-2 block text-sm text-gray-900"%>
           </div>
         <% end %>
         <div class="text-sm">
-          <%= link_to "Forgot your password?", new_user_password_path, class:"font-medium text-red-600 hover:text-red-500"%>
+          <%= link_to "Forgot your password?", new_user_password_path, class:"font-medium text-red-600 hover:text-red-500" %>
         </div>
       </div>
      <div>      
