@@ -11,16 +11,14 @@
       </p>      
     </div>
     <%= form_for(resource, as: resource_name, url: session_path(resource_name),html:{class:"mt-8 space-y-6"}) do |f| %>
-    <%= render "devise/shared/error_messages", resource: resource %>
-    
+    <%= render "devise/shared/error_messages", resource: resource %>    
       <input type="hidden" name="remember" value="true">
       <div class="rounded-md shadow-sm -space-y-px">
         <div>          
           <%= f.email_field :email, autofocus: true, autocomplete: "email", class:"appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm" %>           
         </div>
-        <div>         
-           
-            <%= f.password_field :password, placeholder:"password", autocomplete: "new-password", class:"appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-b-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm" %>        
+        <div> 
+          <%= f.password_field :password, placeholder:"password", autocomplete: "new-password", class:"appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-b-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm" %>        
         </div>
       </div>
       <div class="flex items-center justify-between">       
@@ -49,4 +47,3 @@
     <% end %>
   </div>
 </div>
-
