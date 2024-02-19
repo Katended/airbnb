@@ -1,6 +1,8 @@
 require 'rails_helper'
 RSpec.describe "Api::UsersByEmail", type: :request do
+
   describe 'GET Show' do
+
     context "user exists" do
       it "is successful" do
         user = create(:user)
@@ -15,6 +17,7 @@ RSpec.describe "Api::UsersByEmail", type: :request do
         expect(response.status).to eq 404
       end                      
     end
+    
   end
 end
 
