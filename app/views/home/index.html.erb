@@ -1,1 +1,11 @@
-<h1>Welcome</h1>
+<div class="flex">
+
+    <% @properties.each do | property | %>
+      <div class="property">
+        <h2><%= property.headline %></h2>
+        <h2><%= property.name %></h2>
+        <p><%= property.description %></p>
+      </div>
+    <% end %>
+ 
+</div>
