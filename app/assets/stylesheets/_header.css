@@ -5,3 +5,22 @@
     display:block; 
     color:#ff385c;   
 }
+.airbnb-pink-gradient{
+    background: radial-gradient(circle, rgba(244, 63, 94, 0.9500175070028011) 0%, rgba(244, 63, 94, 1) 100%);
+}
+.invalid-inset-input-text-field {
+    border-color: rgb(244, 63, 94) !important;
+    
+    label {
+    color:rgb(244,63,94) !important;
+   }
+
+   input[type="email"], input[type="text"]{
+
+    &:focus {
+        border-color: rgb(244, 63, 94) !important;
+    }
+    
+    color:rgb(244, 63, 94) !important;
+   }
+}
