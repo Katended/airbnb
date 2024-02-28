@@ -6,4 +6,12 @@ class Property < ApplicationRecord
     validates :address_1 , presence: true
     validates :state , presence: true
     validates :country , presence: true
+
+    geocoded_by :address
+
+    after_validation :geocode, unless: ->(obj){obj.address.present? and obj.address_changed?}
+
+    def address
+        [address_1,address_2,city, state, country].compact.join(', ')
+    end
 end
