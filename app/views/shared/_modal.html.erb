@@ -5,7 +5,6 @@ aria-labelledby="modal-title"
 role="dialog" 
 aria-modal="true"
 id="modal-wrapper"
-
 >
 <div class="hidden" id="modal-trigger" data-action="click->modal#showModal"></div>
   <!--
@@ -31,7 +30,6 @@ data-transition-leave-end="opacity-0"
     <div class="flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0">
       <!--
         Modal panel, show/hide based on modal state.
-
         Entering: "ease-out duration-300"
           From: "opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
           To: "opacity-100 translate-y-0 sm:scale-100"
@@ -48,39 +46,7 @@ data-transition-leave-end="opacity-0"
       data-transition-leave-start="opacity-100 translate-y-0 sm:scale-100"
       data-transition-leave-end="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
       class="hidden relative transform overflow-hidden rounded-lg bg-white text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-lg">
-        <div class="bg-white px-4 pb-4 pt-5 sm:p-6 sm:pb-4">
-          <div>
-            <div class="sm:ml-4 sm:mt-0 sm:text-left">
-              <div class="flex">
-              <div class="flex-none cursor-pointer hover:text-bold" data-modal-target="closeButton">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" data-slot="icon" class="w-6 h-6">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
-                </svg>
-              </div>
-              <div class="grow">
-                <h3 class="text-sm pr-7 text-center font-semibold leading-6 text-gray-900 mb-4" id="modal-title">Login or Sign up</h3>
-              </div>
-            </div>  
-              <div class="relative">
-                <div class="absolute inset-0 flex items-center" aria-hidden="true">
-                  <div class="w-full border-t border-gray-300"></div>
-                </div>
-                <div class="relative flex justify-center">
-                  <span class="px-2 bg-white text-sm text-gray-500"></span>
-                </div>
-              </div>              
-              <div class="mt-4">
-                <h3 class="text-1xl leading-6 text-gray-900  " id="modal-title">Welcome to Airbnb</h3>
-              </div>
-              <div class="relative mt-4 rounded-md shadow-sm">   
-                <input type="text" name="Email" id="Email" class="w-full block rounded-md border-0 py-1.5 pl-7 pr-20 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" placeholder="Email">   
-              </div>           
-            </div>
-          </div>
-        </div>
-        <div class="px-4 py-3 sm:px-6 w-full">
-          <button class="w-full mt-3 inline-flex justify-center rounded-md bg-indigo-700 px-3 py-2 text-sm font-semibold text-white shadow-sm airbnb-pink-gradient">Cancel</button>                   
-        </div>
+       <%= render model_content %>       
        <div class="relative mr-6 w-full flex justify-center">
           <div class="absolute inset-0 flex items-center sm:ml-6 sm:mr-4" aria-hidden="true">
             <div class="w-full border-t border-gray-300"></div>
