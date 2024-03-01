@@ -9,9 +9,9 @@ class Property < ApplicationRecord
 
     geocoded_by :address
 
-    after_validation :geocode, unless: ->(obj){obj.address.present? and obj.address_changed?}
+    after_validation :geocode, if: ->{latitude.blank? && longitude.blank?}
 
     def address
-        [address_1,address_2,city, state, country].compact.join(', ')
+        [state, country].compact.join(', ')
     end
 end
